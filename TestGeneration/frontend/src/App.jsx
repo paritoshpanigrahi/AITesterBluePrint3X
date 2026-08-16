@@ -1725,7 +1725,7 @@ function SectionContent({ activeSection, outputDir }) {
       <section>
         <h3 style={{ color: 'var(--primary)', marginBottom: 12 }}>Overview</h3>
         <p style={{ color: 'var(--text-muted)', fontSize: 13, lineHeight: 1.8 }}>
-           AI QA Platform is a desktop application that automatically generates Playwright TypeScript test files and
+           AI QA Platform is an application that automatically generates Playwright TypeScript test files and
           structured manual test cases from natural language requirements, application URLs, PRD documents, API
           specifications, and codebase analysis. It uses AI language models (OpenAI, Anthropic Claude, Google
           Gemini, Groq, or local Ollama models) to analyze inputs, generate test scenarios, produce executable test code,
