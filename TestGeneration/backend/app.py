@@ -64,6 +64,15 @@ def _sanitize_ascii(obj):
 
 
 
+@app.get("/")
+async def root():
+    return {
+        "name": "AI QA Platform Backend",
+        "status": "ok",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
 @app.get("/health")
 async def health():
     return HealthResponse(status="ok", version="1.0.0")
