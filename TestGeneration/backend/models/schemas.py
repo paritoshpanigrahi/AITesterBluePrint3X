@@ -203,6 +203,13 @@ class LlmErrorInfo(BaseModel):
     suggestion: str = ""
 
 
+class SetupCheckResponse(BaseModel):
+    playwright_installed: bool = False
+    npm_found: bool = False
+    output_dir: str = ""
+    message: str = ""
+
+
 class GenerateTestResponse(BaseModel):
     status: str
     message: str
@@ -281,13 +288,6 @@ class ContextIngestResponse(BaseModel):
 class HealthResponse(BaseModel):
     status: str
     version: str
-
-
-class SetupCheckResponse(BaseModel):
-    playwright_installed: bool = False
-    npm_found: bool = False
-    output_dir: str = ""
-    message: str = ""
 
 
 class SetupPlaywrightResponse(BaseModel):
