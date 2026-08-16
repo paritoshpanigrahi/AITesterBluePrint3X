@@ -788,7 +788,7 @@ function GenerateForm({ mode, title, requiresFeatureName, requiresTestFileName, 
 
       <div className="form-grid">
         <div className="form-group">
-          <label>Application URL</label>
+          <label>Application URL (Mandatory)</label>
           <input type="text" value={form.url} onChange={e => update('url', e.target.value)} placeholder="https://example.com" />
         </div>
 
@@ -1583,7 +1583,7 @@ function ManualTestsTab({ settings }) {
               <input type="text" value={form.featureName} onChange={e => update('featureName', e.target.value)} placeholder="e.g., User Authentication" />
             </div>
             <div className="form-group">
-              <label>Application URL</label>
+              <label>Application URL (Mandatory)</label>
               <input type="text" value={form.url} onChange={e => update('url', e.target.value)} placeholder="https://example.com" />
             </div>
             <div className="form-group">
