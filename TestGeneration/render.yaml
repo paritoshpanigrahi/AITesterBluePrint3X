@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ai-qa-backend
+    runtime: docker
+    plan: free
+    region: singapore
+    rootDirectory: TestGeneration
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: OUTPUT_DIR
+        value: /data

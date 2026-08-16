@@ -61,7 +61,7 @@ export default function App() {
   }
 
   async function pollBackend() {
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 120; i++) {
       try {
         const h = await api.getHealth();
         if (h.status === 'ok') {
@@ -72,7 +72,7 @@ export default function App() {
       } catch (e) { /* still starting */ }
       await new Promise(r => setTimeout(r, 500));
     }
-    setError('Failed to connect to backend after 30 seconds');
+    setError('Failed to connect to backend after 60 seconds');
   }
 
   async function handleSaveSettings(newSettings) {

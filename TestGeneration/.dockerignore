@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+node_modules/
+frontend/node_modules/
+dist/
+dist-electron/
+build/
+.vite/
+*.log
+*.err
+*.spec
+UI Test Automation/
+manual-tests/
+pages/
+plans/
+reports/
+tests/
+_*.py
+_*.json
+.git/
