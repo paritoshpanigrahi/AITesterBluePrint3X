@@ -419,6 +419,13 @@ async def list_models():
         {"id": "claude-opus-4", "name": "Claude Opus 4", "vendor": "anthropic"},
         {"id": "gemini-2.0-flash", "name": "Gemini 2.0 Flash", "vendor": "google"},
         {"id": "gemini-2.5-pro", "name": "Gemini 2.5 Pro", "vendor": "google"},
+        {"id": "big-pickle", "name": "Big Pickle (Free)", "vendor": "opencode"},
+        {"id": "deepseek-v4-flash-free", "name": "DeepSeek V4 Flash (Free)", "vendor": "opencode"},
+        {"id": "deepseek-v4-flash", "name": "DeepSeek V4 Flash", "vendor": "opencode"},
+        {"id": "kimi-k3", "name": "Kimi K3", "vendor": "opencode"},
+        {"id": "glm-5.2", "name": "GLM 5.2", "vendor": "opencode"},
+        {"id": "qwen3.7-max", "name": "Qwen3.7 Max", "vendor": "opencode"},
+        {"id": "minimax-m3", "name": "MiniMax M3", "vendor": "opencode"},
     ]
     return {"data": fallback}
 

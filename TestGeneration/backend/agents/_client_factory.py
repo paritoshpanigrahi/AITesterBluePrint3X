@@ -11,6 +11,7 @@ PROVIDER_BASE_URLS = {
     "anthropic": "https://api.anthropic.com/v1",
     "google": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "groq": "https://api.groq.com/openai/v1",
+    "opencode": "https://opencode.ai/zen/v1",
     "github-copilot": "https://api.githubcopilot.com/v1",
     "ollama": None,
 }

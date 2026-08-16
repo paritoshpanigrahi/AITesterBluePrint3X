@@ -7,6 +7,7 @@ const PROVIDERS = {
   anthropic: { label: 'Anthropic Claude', models: ['claude-sonnet-4-5', 'claude-3-7-sonnet', 'claude-opus-4'] },
   google: { label: 'Google Gemini', models: ['gemini-2.0-flash', 'gemini-2.5-pro'] },
   groq: { label: 'Groq', models: ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile', 'llama-4-maverick-17b-128e-instruct', 'llama-4-scout-instruct', 'gpt-oss-120b', 'gpt-oss-20b', 'gpt-oss-safeguard-20b', 'groq/compound', 'groq/compound-mini', 'whisper-large-v3', 'whisper-large-v3-turbo', 'meta-llama/llama-guard-4-12b', 'moonshotai/kimi-k2-instruct'] },
+  opencode: { label: 'OpenCode Zen', models: ['big-pickle', 'deepseek-v4-flash-free', 'deepseek-v4-flash', 'kimi-k3', 'glm-5.2', 'qwen3.7-max', 'minimax-m3'] },
   ollama: { label: 'Ollama (Local)', models: ['llama3', 'mistral:7b-v0.3', 'phi3:mini', 'gemma2:9b', 'codellama:13b', 'qwen2.5:7b', 'vicuna:13b', 'openhermes:2.5'] },
   'github-copilot': { label: 'VS Code GitHub Copilot', models: ['gpt-4o', 'claude-sonnet-4-5', 'gemini-2.0-flash-001'] },
 };
@@ -18,6 +19,7 @@ export default function App() {
   const [settings, setSettings] = useState({
     llmProvider: 'openai', llmModel: 'gpt-4o', openaiApiKey: '',
     anthropicApiKey: '', googleApiKey: '', groqApiKey: '', githubCopilotToken: '', ollamaBaseUrl: 'http://localhost:11434',
+    opencodeApiKey: '',
     outputDir: '', theme: 'dark',
     jiraUrl: '', jiraEmail: '', jiraApiToken: '',
     confluenceUrl: '', confluenceEmail: '', confluenceApiToken: '',
@@ -271,6 +273,7 @@ function SettingsPanel({ settings, onSave, onRestart, onClose, appVersion, platf
       case 'anthropic': return 'anthropicApiKey';
       case 'google': return 'googleApiKey';
       case 'groq': return 'groqApiKey';
+      case 'opencode': return 'opencodeApiKey';
       default: return 'openaiApiKey';
     }
   }
@@ -280,6 +283,7 @@ function SettingsPanel({ settings, onSave, onRestart, onClose, appVersion, platf
       case 'anthropic': return local.anthropicApiKey;
       case 'google': return local.googleApiKey;
       case 'groq': return local.groqApiKey;
+      case 'opencode': return local.opencodeApiKey;
       default: return local.openaiApiKey;
     }
   }
@@ -759,6 +763,7 @@ function GenerateForm({ mode, title, requiresFeatureName, requiresTestFileName, 
       case 'anthropic': return settings.anthropicApiKey;
       case 'google': return settings.googleApiKey;
       case 'groq': return settings.groqApiKey;
+      case 'opencode': return settings.opencodeApiKey;
       default: return settings.openaiApiKey;
     }
   }
@@ -1527,6 +1532,7 @@ function ManualTestsTab({ settings }) {
       case 'anthropic': return settings.anthropicApiKey;
       case 'google': return settings.googleApiKey;
       case 'groq': return settings.groqApiKey;
+      case 'opencode': return settings.opencodeApiKey;
       default: return settings.openaiApiKey;
     }
   }
