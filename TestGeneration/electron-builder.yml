@@ -1,0 +1,26 @@
+appId: com.aiqaplatform.app
+productName: AI QA Platform
+directories:
+  output: dist-electron
+files:
+  - electron/**/*
+  - frontend/dist/**/*
+  - package.json
+win:
+  target: portable
+  icon: assets/icon.ico
+  extraResources:
+    - from: dist/app.exe
+      to: backend/app.exe
+mac:
+  target: dmg
+  icon: assets/icon.icns
+  extraResources:
+    - from: dist/app
+      to: backend/app
+linux:
+  target: AppImage
+  icon: assets/icon.png
+  extraResources:
+    - from: dist/app
+      to: backend/app

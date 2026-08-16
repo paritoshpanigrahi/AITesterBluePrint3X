@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+.env
+
+# Node
+node_modules/
+.vite/
+*.log
+*.err
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / packaging output
+dist/
+dist-electron/
+build/
+frontend/dist/
+backend/app/
+
+# Generated test automation output directories
+UI Test Automation/
+
+# Generated outputs inside TestGeneration
+TestGeneration/manual-tests/
+TestGeneration/pages/
+TestGeneration/plans/
+TestGeneration/reports/
+TestGeneration/tests/
+
+# Scratch / temporary files inside TestGeneration
+TestGeneration/_*.py
+TestGeneration/_*.json
+TestGeneration/test_page_locators.json
+TestGeneration/backend*.log
+TestGeneration/backend*.err

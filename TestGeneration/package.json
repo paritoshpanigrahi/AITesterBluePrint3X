@@ -1,0 +1,26 @@
+{
+  "name": "ai-qa-platform",
+  "version": "1.0.0",
+  "description": "AI QA Platform Desktop Application",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently -n FE,BE \"npm run dev:frontend\" \"npm run dev:electron\"",
+    "dev:all": "npm run dev:frontend",
+    "dev:frontend": "concurrently -n FE,BE \"cd frontend && npx vite --port 5175\" \"python -m uvicorn backend.app:app --port 8765 --reload\"",
+    "dev:backend": "python -m uvicorn backend.app:app --port 8765 --reload",
+    "dev:electron": "wait-on http://localhost:5175 && npx electron .",
+    "build": "bash build.sh",
+    "dist": "npx electron-builder",
+    "postinstall": "cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "electron-window-state": "^5.0.3"
+  }
+}

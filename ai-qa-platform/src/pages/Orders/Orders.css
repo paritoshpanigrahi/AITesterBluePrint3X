@@ -1,0 +1,25 @@
+.orders-page { max-width: 1200px; }
+
+.orders-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+
+.order-card {
+  background: #fff; border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid transparent;
+}
+.order-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #6366f1; }
+
+.order-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.order-card-id { font-weight: 700; color: #6366f1; font-size: 14px; }
+.order-card-body { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.order-card-customer { font-size: 14px; color: #374151; }
+.order-card-total { font-size: 18px; font-weight: 700; color: #111827; }
+.order-card-footer { display: flex; justify-content: space-between; font-size: 12px; color: #9ca3af; }
+
+.modal-lg { max-width: 600px; }
+
+.order-item-row {
+  display: flex; gap: 8px; align-items: center; margin-bottom: 8px;
+}
+.order-item-row select { flex: 1; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 13px; }
+.qty-input { width: 70px; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 13px; }
+
+.btn-sm { padding: 6px 12px; font-size: 12px; }
